@@ -1,10 +1,11 @@
 import React from "react";
 import "./LanguageSelector.css";
 import logo from "../../assets/logo.png";
+import logoAssises from "../../assets/logo_assises_1.png";
 
 const LanguageSelector = () => {
   const openLink = (url) => {
-    window.open(url, "_blank"); // ouvre dans un nouvel onglet
+    window.open(url, "_blank");
   };
 
   return (
@@ -14,6 +15,16 @@ const LanguageSelector = () => {
       </header>
 
       <main className="content">
+        {/* 🆕 Titre avec logo à gauche */}
+        <div className="title-with-logo">
+          <img
+            src={logoAssises}
+            alt="Logo Assises IA"
+            className="assises-logo"
+          />
+          <h1 className="main-title">Rapport de synthèse – Assises IA</h1>
+        </div>
+
         <h2>Choisissez votre langue</h2>
 
         <div className="buttons">

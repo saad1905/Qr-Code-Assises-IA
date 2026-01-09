@@ -142,3 +142,73 @@
   outline: 3px solid rgba(37, 99, 235, 0.4);
   outline-offset: 3px;
 }
+/* 🆕 Titre principal */
+.main-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 1.8rem;
+    margin: 0;           /* ❌ supprime l’espace fantôme */
+    padding: 0;
+    line-height: 1.1; 
+  }
+}
+/* Conteneur titre + logo */
+.title-with-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* Logo Assises IA */
+.assises-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Titre principal */
+.main-title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* Mobile : centré */
+@media (max-width: 767px) {
+  .title-with-logo {
+    justify-content: center;
+    gap: 0;          /* ⬅️ espace réduit uniquement sur mobile */
+
+  }
+
+  .main-title {
+    text-align: center;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .assises-logo {
+    width: 72px;
+    height: 72px;
+    margin-right: -10px;  /* ⬅️ rapproche encore plus */
+
+  }
+}
