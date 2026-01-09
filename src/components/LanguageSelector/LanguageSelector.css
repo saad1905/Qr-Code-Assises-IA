@@ -1,0 +1,144 @@
+/* Page globale */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f7fa; /* 🎨 Background unique */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+}
+
+/* 🔰 Header */
+.header {
+  padding: 24px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent; /* ❌ plus de blanc */
+  box-shadow: none; /* ❌ plus d’ombre */
+}
+
+/* Logo */
+.app-logo {
+  width: 120px;
+  height: auto;
+}
+
+/* Contenu */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  /* 🔼 Faire monter le contenu */
+  margin-top: -200px;
+}
+
+/* Titre */
+.content h2 {
+  margin-bottom: 24px;
+  color: #1f2937;
+  text-align: center;
+}
+
+/* Boutons */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.buttons button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: white;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.buttons button:hover {
+  background-color: #1e40af;
+  transform: scale(1.02);
+}
+
+/* 💻 Desktop */
+@media (min-width: 768px) {
+  .app-logo {
+    width: 160px;
+  }
+
+  .buttons {
+    max-width: 600px;
+    flex-direction: row;
+  }
+
+  .buttons button {
+    flex: 1;
+  }
+}
+
+.content h2 {
+  margin-bottom: 28px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
+/* Soulignement décoratif */
+.content h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #2563eb;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* 💻 Desktop */
+@media (min-width: 768px) {
+  .content h2 {
+    font-size: 2rem;
+  }
+}
+.buttons button {
+  width: 100%;
+  padding: 15px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+/* Hover (desktop) */
+.buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35);
+}
+
+/* Click */
+.buttons button:active {
+  transform: scale(0.98);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.2);
+}
+
+/* Focus (accessibilité) */
+.buttons button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.4);
+  outline-offset: 3px;
+}
